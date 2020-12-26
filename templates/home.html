@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <style>
+        .background {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('static/images/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        textarea {
+            width: 420px;
+            height: 150px;
+            background: none repeat scroll 0 0 rgba(240, 159, 54, 0.534);
+            border-color: #FFFFFF;
+            border-radius: 8px 8px 0px 0px;
+            border-style: none;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 1em;
+            line-height: 1.4em;
+            padding: 8px 15px;
+            transition: 0.2s ease 0s;
+        }
+        .text-box {
+            width: 420px;
+            height: 150px;
+            background: none repeat scroll 0 0 rgba(240, 159, 54, 0.534);
+            border-color: #FFFFFF;
+            border-radius: 8px;
+            border-style: none;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 1em;
+            line-height: 1.4em;
+            padding: 8px 15px;
+            transition:  0.2s ease 0s;
+        }
+
+        #btn-analyze {
+            width: 420px;
+            height: 40px;
+            background-color: #926c4a;
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        #btn-analyze-home {
+            width: 420px;
+            height: 40px;
+            background-color: #dd9b61;
+            border-radius: 8px;
+        }
+
+        .card {
+            background-color: rgba(240, 159, 54, 0.534);
+            border-radius: 8px;
+            border-style: none;
+        }
+        .input-text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-size: 30px; 
+            text-align: center;
+            margin-top: -40%;
+            margin-bottom: 10%;
+        }
+    </style>
+    <title>Query Result</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <div class="background d-flex justify-content-center align-items-center">
+        <div class="">
+            <h1 class="input-text">
+                Input Your Review
+            </h1>
+            <form method="POST" class="d-flex flex-column align-items-center pt-2" action="{{ url_for('upload') }}">
+                <textarea placeholder="Input your review here..." class="text-box" name="query"></textarea>
+                <button type="submit" id="btn-analyze-home" class="btn mt-4">Analyze</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
